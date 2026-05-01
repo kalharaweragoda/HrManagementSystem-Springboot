@@ -1,18 +1,20 @@
 package edu.icet.service;
 
+import edu.icet.dto.EmployeeDto;
 import edu.icet.dto.LeaveDto;
 import edu.icet.dto.LeaveSendDto;
 
 import java.util.List;
 
 public interface EmployeeService {
-    List<LeaveSendDto> getAllLeaves();
 
-    LeaveSendDto getLeaveById(Integer id);
+    List<EmployeeDto> getAllEmployees();
 
-    LeaveSendDto addLeave(LeaveDto leaveDto);
+    EmployeeDto getEmployeeById(Integer id);
 
-    LeaveSendDto updateLeave(Integer id, LeaveDto leaveDto);
+    EmployeeDto addEmployee(EmployeeDto employeeDto);
 
-    Boolean deleteLeave(Integer id);
+    EmployeeDto updateEmployee(Integer id, EmployeeDto employeeDto);
+
+    Boolean deleteEmployee(Integer id);
 }

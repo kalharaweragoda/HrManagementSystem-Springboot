@@ -4,6 +4,7 @@ package edu.icet.service.impl;
 import edu.icet.dto.EmployeeDto;
 import edu.icet.entity.EmployeeEntity;
 import edu.icet.repository.EmployeeRepository;
+import edu.icet.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class EmployeeServiceImpl {
+public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeRepository employeeRepository;
     private final ModelMapper modelMapper;
