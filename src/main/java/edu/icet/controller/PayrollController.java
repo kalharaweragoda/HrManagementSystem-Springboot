@@ -2,11 +2,13 @@ package edu.icet.controller;
 
 import edu.icet.dto.PayrollDto;
 import edu.icet.dto.PayrollSendDto;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.PrintWriter;
 import java.util.List;
 
 @RestController
@@ -46,6 +48,44 @@ public class PayrollController {
         } else {
             return ResponseEntity.notFound().build();
         }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Boolean> deletePayroll(@PathVariable("id") Integer id) {
+        Boolean isDeleted = payrollService.deletePayroll(id);
+        if (isDeleted) {
+            return ResponseEntity.ok(isDeleted);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @GetMapping("/report")
+    public void exportCSV(HttpServletResponse response) throws IOException {
+        response.setContentType("text/csv");
+        response.setHeader("Content-Disposition", "attachment; filename=payrolls.csv");
+
+        List<PayrollSendDto> payrollList = payrollService.getAllPayrolls();
+        PrintWriter writer = response.getWriter();
+
+        writer.println("ID,Employee Name,Pay Date,Basic Salary,Allowances,Deductions,Net Salary,Created At,Updated At");
+
+        for (PayrollSendDto payroll : payrollList) {
+            writer.println(String.format("%d,%s,%s,%.2f,%.2f,%.2f,%.2f,%s,%s",
+                    payroll.getId(),
+                    payroll.getEmployee().getName(),
+                    payroll.getPayDate(),
+                    payroll.getBasicSalary(),
+                    payroll.getAllowances(),
+                    payroll.getDeductions(),
+                    payroll.getNetSalary(),
+                    payroll.getCreatedAt(),
+                    payroll.getUpdatedAt()
+            ));
+        }
+
+        writer.flush();
+        writer.close();
     }
 
 }
