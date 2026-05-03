@@ -1,4 +1,7 @@
 package edu.icet.repository;
 
-public interface PayrollRepository {
+import edu.icet.entity.PayrollEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PayrollRepository extends JpaRepository<PayrollEntity, Integer> {
 }
