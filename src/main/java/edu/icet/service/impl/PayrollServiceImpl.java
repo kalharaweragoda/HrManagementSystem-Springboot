@@ -34,4 +34,15 @@ public class PayrollServiceImpl implements PayrollService {
         return null;
     }
 
+
+    @Override
+    public PayrollSendDto updatePayroll(Integer id, PayrollDto payrollDto) {
+        if (payrollRepository.existsById(id) && id.equals(payrollDto.getId())) {
+            PayrollDto updated = modelMapper.map(payrollRepository.save(modelMapper.map(payrollDto, PayrollEntity.class)), PayrollDto.class);
+            EmployeeDto employee = employeeService.getEmployeeById(payrollDto.getEmployeeId());
+            return getPayrollSendDto(updated, employee);
+        }
+        return null;
+    }
+
 }
