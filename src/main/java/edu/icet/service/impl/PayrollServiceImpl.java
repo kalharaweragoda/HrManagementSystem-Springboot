@@ -4,15 +4,40 @@ import edu.icet.dto.EmployeeDto;
 import edu.icet.dto.PayrollDto;
 import edu.icet.dto.PayrollSendDto;
 import edu.icet.entity.PayrollEntity;
+import edu.icet.repository.PayrollRepository;
 import edu.icet.service.EmployeeService;
 import edu.icet.service.PayrollService;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
+@Service
+@RequiredArgsConstructor
 public class PayrollServiceImpl implements PayrollService {
 
     private final PayrollRepository payrollRepository;
     private final EmployeeService employeeService;
     private final ModelMapper modelMapper;
+
+    @Override
+    public List<PayrollSendDto> getAllPayrolls() {
+        List<PayrollEntity> entities = payrollRepository.findAll();
+        List<EmployeeDto> allEmployees = employeeService.getAllEmployees();
+        List<PayrollSendDto> dtoList = new ArrayList<>();
+        for (PayrollEntity entity : entities) {
+            PayrollDto payrollDto = modelMapper.map(entity, PayrollDto.class);
+            for (EmployeeDto employee : allEmployees) {
+                if (employee.getId().equals(payrollDto.getEmployeeId())) {
+                    dtoList.add(getPayrollSendDto(payrollDto, employee));
+                }
+            }
+        }
+        return dtoList;
+    }
 
     @Override
     public PayrollSendDto getPayrollById(Integer id) {
@@ -33,7 +58,6 @@ public class PayrollServiceImpl implements PayrollService {
         }
         return null;
     }
-
 
     @Override
     public PayrollSendDto updatePayroll(Integer id, PayrollDto payrollDto) {
@@ -67,5 +91,4 @@ public class PayrollServiceImpl implements PayrollService {
                 payrollDto.getUpdatedAt()
         );
     }
-
 }
