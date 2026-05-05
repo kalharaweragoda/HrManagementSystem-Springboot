@@ -4,6 +4,7 @@ import edu.icet.dto.AuthRequestDto;
 import edu.icet.dto.AuthResponseDto;
 import edu.icet.dto.RegisterRequestDto;
 import edu.icet.dto.UserDto;
+import edu.icet.security.JwtUtil;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
