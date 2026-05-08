@@ -1,4 +1,4 @@
-package edu.icet.entity;
+package org.hrmanage.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

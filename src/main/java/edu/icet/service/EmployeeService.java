@@ -1,8 +1,7 @@
-package edu.icet.service;
+package org.hrmanage.service;
 
-import edu.icet.dto.EmployeeDto;
-import edu.icet.dto.LeaveDto;
-import edu.icet.dto.LeaveSendDto;
+import org.hrmanage.dto.EmployeeDto;
+import org.hrmanage.util.DepartmentType;
 
 import java.util.List;
 

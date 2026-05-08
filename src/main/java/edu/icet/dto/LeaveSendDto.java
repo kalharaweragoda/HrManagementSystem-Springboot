@@ -1,13 +1,13 @@
-package edu.icet.dto;
+package org.hrmanage.dto;
 
-import edu.icet.util.LeaveStatus;
-import edu.icet.util.LeaveType;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hrmanage.util.LeaveStatus;
+import org.hrmanage.util.LeaveType;
 
 import java.time.LocalDate;
 

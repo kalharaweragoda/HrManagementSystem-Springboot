@@ -1,11 +1,11 @@
-package edu.icet.controller;
+package org.hrmanage.controller;
 
-import edu.icet.dto.PayrollDto;
-import edu.icet.dto.PayrollSendDto;
-import edu.icet.service.PayrollService;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.hrmanage.dto.PayrollDto;
+import org.hrmanage.dto.PayrollSendDto;
+import org.hrmanage.service.PayrollService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

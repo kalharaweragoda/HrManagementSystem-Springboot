@@ -1,11 +1,11 @@
-package edu.icet.controller;
+package org.hrmanage.controller;
 
-import edu.icet.dto.LeaveDto;
-import edu.icet.dto.LeaveSendDto;
-import edu.icet.service.LeaveService;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.hrmanage.dto.LeaveDto;
+import org.hrmanage.dto.LeaveSendDto;
+import org.hrmanage.service.LeaveService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

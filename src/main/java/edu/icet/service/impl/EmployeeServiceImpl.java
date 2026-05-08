@@ -1,11 +1,11 @@
-package edu.icet.service.impl;
+package org.hrmanage.service.impl;
 
-
-import edu.icet.dto.EmployeeDto;
-import edu.icet.entity.EmployeeEntity;
-import edu.icet.repository.EmployeeRepository;
-import edu.icet.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
+import org.hrmanage.dto.EmployeeDto;
+import org.hrmanage.entity.EmployeeEntity;
+import org.hrmanage.repository.EmployeeRepository;
+import org.hrmanage.service.EmployeeService;
+import org.hrmanage.util.DepartmentType;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,6 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class EmployeeServiceImpl implements EmployeeService {
-
     private final EmployeeRepository employeeRepository;
     private final ModelMapper modelMapper;
 
@@ -48,9 +47,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public EmployeeDto updateEmployee(Integer id, EmployeeDto employeeDto) {
         if (employeeRepository.existsById(id) && id.equals(employeeDto.getId())) {
-            EmployeeEntity savedEntity = employeeRepository.save(modelMapper.map(employeeDto, EmployeeEntity.class));
-            return modelMapper.map(savedEntity, EmployeeDto.class);
-        }
+                EmployeeEntity savedEntity = employeeRepository.save(modelMapper.map(employeeDto, EmployeeEntity.class));
+                return modelMapper.map(savedEntity, EmployeeDto.class);
+            }
         return null;
     }
 
@@ -62,4 +61,5 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         return false;
     }
+
 }

@@ -1,6 +1,6 @@
-package edu.icet.repository;
+package org.hrmanage.repository;
 
-import edu.icet.entity.UserEntity;
+import org.hrmanage.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
@@ -8,5 +8,4 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
     boolean existsByUsername(String username);
 
     UserEntity findByUsername(String username);
-
 }

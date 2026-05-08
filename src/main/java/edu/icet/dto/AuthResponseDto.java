@@ -1,4 +1,4 @@
-package edu.icet.dto;
+package org.hrmanage.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

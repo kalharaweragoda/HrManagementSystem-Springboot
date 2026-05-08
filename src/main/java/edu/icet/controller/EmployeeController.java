@@ -1,10 +1,10 @@
-package edu.icet.controller;
+package org.hrmanage.controller;
 
-import edu.icet.dto.EmployeeDto;
-import edu.icet.service.EmployeeService;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.hrmanage.dto.EmployeeDto;
+import org.hrmanage.service.EmployeeService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -68,6 +68,4 @@ public class EmployeeController {
         writer.flush();
         writer.close();
     }
-
-
 }

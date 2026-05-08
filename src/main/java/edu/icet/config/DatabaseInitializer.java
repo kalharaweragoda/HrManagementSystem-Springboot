@@ -1,10 +1,10 @@
-package edu.icet.config;
+package org.hrmanage.config;
 
-import edu.icet.entity.UserEntity;
-import edu.icet.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import lombok.extern.slf4j.Slf4j;
+import org.hrmanage.entity.UserEntity;
+import org.hrmanage.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -19,7 +19,7 @@ public class DatabaseInitializer implements CommandLineRunner {
 
     @Value("${app.admin.username}")
     String username;
-
+    
     @Value("${app.admin.password}")
     String password;
 

@@ -1,14 +1,14 @@
-package edu.icet.controller;
+package org.hrmanage.controller;
 
-import edu.icet.dto.AuthRequestDto;
-import edu.icet.dto.AuthResponseDto;
-import edu.icet.dto.RegisterRequestDto;
-import edu.icet.dto.UserDto;
-import edu.icet.security.JwtUtil;
-import edu.icet.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.hrmanage.dto.AuthRequestDto;
+import org.hrmanage.dto.AuthResponseDto;
+import org.hrmanage.dto.RegisterRequestDto;
+import org.hrmanage.dto.UserDto;
+import org.hrmanage.security.JwtUtil;
+import org.hrmanage.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

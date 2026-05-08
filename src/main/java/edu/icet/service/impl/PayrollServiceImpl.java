@@ -1,19 +1,18 @@
-package edu.icet.service.impl;
+package org.hrmanage.service.impl;
 
-import edu.icet.dto.EmployeeDto;
-import edu.icet.dto.PayrollDto;
-import edu.icet.dto.PayrollSendDto;
-import edu.icet.entity.PayrollEntity;
-import edu.icet.repository.PayrollRepository;
-import edu.icet.service.EmployeeService;
-import edu.icet.service.PayrollService;
 import lombok.RequiredArgsConstructor;
+import org.hrmanage.dto.EmployeeDto;
+import org.hrmanage.dto.PayrollDto;
+import org.hrmanage.dto.PayrollSendDto;
+import org.hrmanage.entity.PayrollEntity;
+import org.hrmanage.repository.PayrollRepository;
+import org.hrmanage.service.EmployeeService;
+import org.hrmanage.service.PayrollService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 @Service
 @RequiredArgsConstructor

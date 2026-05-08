@@ -1,8 +1,8 @@
-package edu.icet.repository;
+package org.hrmanage.repository;
 
-import edu.icet.entity.EmployeeEntity;
-import edu.icet.util.DepartmentType;
 import jakarta.validation.constraints.NotNull;
+import org.hrmanage.entity.EmployeeEntity;
+import org.hrmanage.util.DepartmentType;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

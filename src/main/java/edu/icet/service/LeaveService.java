@@ -1,12 +1,11 @@
-package edu.icet.service;
+package org.hrmanage.service;
 
-import edu.icet.dto.LeaveDto;
-import edu.icet.dto.LeaveSendDto;
+import org.hrmanage.dto.LeaveDto;
+import org.hrmanage.dto.LeaveSendDto;
 
 import java.util.List;
 
 public interface LeaveService {
-
     List<LeaveSendDto> getAllLeaves();
 
     LeaveSendDto getLeaveById(Integer id);

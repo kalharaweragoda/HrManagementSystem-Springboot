@@ -1,4 +1,4 @@
-package edu.icet.util;
+package org.hrmanage.util;
 
 public enum DepartmentType {
     HR,

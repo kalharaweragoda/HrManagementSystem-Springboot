@@ -1,13 +1,14 @@
-package edu.icet.service.impl;
+package org.hrmanage.service.impl;
 
-import edu.icet.dto.EmployeeDto;
-import edu.icet.dto.LeaveDto;
-import edu.icet.dto.LeaveSendDto;
-import edu.icet.entity.LeaveEntity;
-import edu.icet.repository.LeaveRepository;
-import edu.icet.service.EmployeeService;
-import edu.icet.service.LeaveService;
 import lombok.RequiredArgsConstructor;
+import org.hrmanage.dto.EmployeeDto;
+import org.hrmanage.dto.LeaveDto;
+import org.hrmanage.dto.LeaveSendDto;
+import org.hrmanage.entity.EmployeeEntity;
+import org.hrmanage.entity.LeaveEntity;
+import org.hrmanage.repository.LeaveRepository;
+import org.hrmanage.service.EmployeeService;
+import org.hrmanage.service.LeaveService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 

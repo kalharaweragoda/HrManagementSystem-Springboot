@@ -1,14 +1,14 @@
-package edu.icet.service.impl;
+package org.hrmanage.service.impl;
 
-import edu.icet.dto.UserDto;
-import edu.icet.entity.UserEntity;
-import edu.icet.repository.UserRepository;
-import edu.icet.service.UserService;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.hrmanage.dto.UserDto;
+import org.hrmanage.entity.UserEntity;
+import org.hrmanage.repository.UserRepository;
+import org.hrmanage.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
@@ -18,6 +18,7 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
+
 
     @Override
     public UserDto registerUser(UserDto userDTO) {

@@ -1,6 +1,6 @@
-package edu.icet.service;
+package org.hrmanage.service;
 
-import edu.icet.dto.UserDto;
+import org.hrmanage.dto.UserDto;
 
 public interface UserService {
 

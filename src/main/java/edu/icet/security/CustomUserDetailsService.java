@@ -1,20 +1,23 @@
-package edu.icet.security;
+package org.hrmanage.security;
 
-import edu.icet.entity.UserEntity;
-import edu.icet.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
+import org.hrmanage.entity.UserEntity;
+import org.hrmanage.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 
+@Service
+@Transactional
+@RequiredArgsConstructor
 public class CustomUserDetailsService implements UserDetailsService {
 
     private final UserRepository userRepository;
 
-    public CustomUserDetailsService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

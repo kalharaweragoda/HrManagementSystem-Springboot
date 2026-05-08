@@ -1,10 +1,10 @@
-package edu.icet.entity;
+package org.hrmanage.entity;
 
-import edu.icet.util.DepartmentType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hrmanage.util.DepartmentType;
 
 import java.time.LocalDate;
 

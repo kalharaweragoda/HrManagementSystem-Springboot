@@ -1,7 +1,7 @@
-package edu.icet.service;
+package org.hrmanage.service;
 
-import edu.icet.dto.PayrollDto;
-import edu.icet.dto.PayrollSendDto;
+import org.hrmanage.dto.PayrollDto;
+import org.hrmanage.dto.PayrollSendDto;
 
 import java.util.List;
 

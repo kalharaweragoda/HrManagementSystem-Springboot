@@ -1,7 +1,7 @@
-package edu.icet.config;
+package org.hrmanage.config;
 
-import edu.icet.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
+import org.hrmanage.security.JwtAuthenticationFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

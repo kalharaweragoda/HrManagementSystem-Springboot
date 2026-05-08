@@ -1,6 +1,6 @@
-package edu.icet.repository;
+package org.hrmanage.repository;
 
-import edu.icet.entity.LeaveEntity;
+import org.hrmanage.entity.LeaveEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface LeaveRepository extends JpaRepository<LeaveEntity, Integer> {

@@ -1,4 +1,4 @@
-package edu.icet.util;
+package org.hrmanage.util;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;

@@ -1,4 +1,4 @@
-package edu.icet.dto;
+package org.hrmanage.dto;
 
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;

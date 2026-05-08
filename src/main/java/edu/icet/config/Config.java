@@ -1,4 +1,4 @@
-package edu.icet.config;
+package org.hrmanage.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
